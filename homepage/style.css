@@ -1,0 +1,405 @@
+/* Variables */
+:root {
+  --principale-bg-color: #424752;
+  --secondary-bg-color: #242527;
+  --text-color: #d6dce7;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background-color: var(--principale-bg-color);
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* Proprietes Flexbox */
+.d-flex {
+  display: flex;
+}
+.d-inlineFlex {
+  display: inline-flex;
+}
+.d-column {
+  flex-direction: column;
+}
+.d-row {
+  flex-direction: row;
+}
+/* Passage a la ligne */
+.d-wrap {
+  flex-wrap: wrap;
+}
+/* Agrandissement selon l'espace vide */
+.d-grow1 {
+  flex-grow: 1;
+}
+.d-grow2 {
+  flex-grow: 2;
+}
+/* Facteur de retrecissement */
+.d-shrink2 {
+  flex-shrink: 2;
+}
+/* Alignement sur axe principal - justify-content */
+.d-jcStart {
+  justify-content: flex-start;
+}
+.d-jcCenter {
+  justify-content: center;
+}
+.d-jcEnd {
+  justify-content: flex-end;
+}
+.d-jcBetween {
+  justify-content: space-between;
+}
+.d-jcAround {
+  justify-content: space-around;
+}
+/* Alignement sur axe secondaire - align-items */
+.d-aiStart {
+  align-items: flex-start;
+}
+.d-aiEnd {
+  align-items: flex-end;
+}
+.d-aiCenter {
+  align-items: center;
+}
+.d-aibaseline {
+  align-items: baseline;
+}
+.d-aiStretch {
+  align-items: stretch;
+}
+/* Alignement sur axe secondaire individuellement - align-self */
+.d-asStart {
+  align-items: flex-start;
+}
+.d-asEnd {
+  align-items: flex-end;
+}
+.d-asCenter {
+  align-items: center;
+}
+.d-asbaseline {
+  align-items: baseline;
+}
+.d-asStretch {
+  align-items: stretch;
+}
+/* Gérer l’alignement des lignes selon l’axe secondaire - align-content */
+/*  align-content n’a aucun effet si le conteneur n'a qu’une seule ligne */
+.d-acStart {
+  align-content: flex-start;
+}
+.d-acCenter {
+  align-content: center;
+}
+.d-acEnd {
+  align-content: flex-end;
+}
+.d-acBetween {
+  align-content: space-between;
+}
+.d-acAround {
+  align-content: space-around;
+}
+
+/* BORDER */
+.bdr-red {
+  border: solid 1px red;
+}
+.bdr-blue {
+  border: solid 1px blue;
+}
+.bdr-white {
+  border: solid 1px white;
+}
+
+/* NAVBAR */
+/* ============================================== */
+.navbar {
+  height: 56px;
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0 0 10px black;
+}
+.navbar h1 {
+  color: var(--text-color);
+  margin: 0 1em;
+  font-size: 2em;
+}
+
+.navbar ul li {
+  color: var(--text-color);
+  margin: 0 1em;
+}
+.navbar ul li a {
+  color: var(--text-color);
+}
+.navbar ul li a:hover {
+  font-size: 150%;
+  transition: all 0.2s ease-in-out;
+}
+.navbar .clear {
+  margin: 0 1em;
+}
+.navbar .clear img {
+  width: 30px;
+  height: 30px;
+  /* align-self: center; */
+}
+/* =========================== */
+/*         CONTAINER           */
+/* =========================== */
+.container {
+  height: calc(100vh - 56px);
+}
+
+/* =========================== */
+/* TODOLISt */
+/* =========================== */
+.todolist {
+  min-width: 300px;
+}
+.todolist h2,
+.fia h2 {
+  color: var(--text-color);
+  margin-top: 1em;
+}
+.add-to-do input {
+  text-align: center;
+}
+.todolist .content {
+  width: 100%;
+}
+.todolist .content ul {
+  margin: 1em;
+}
+/* PARTIE AJOUTEE AVEC JAVASCRIPT */
+.todolist .content ul li {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  margin-bottom: 0.5em;
+  background-color: var(--text-color);
+  border-radius: 4px;
+}
+.todolist .content ul li div {
+  display: flex;
+  height: 32px;
+  width: 40px;
+  margin: 0;
+}
+.todolist .content ul li .col-8 {
+  width: 100%;
+  text-align: center;
+}
+.todolist .content ul li .col-8 p {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+.todolist .content ul li div img {
+  width: 24px;
+  height: 24px;
+  align-self: center;
+  margin: auto;
+}
+.lineThrough {
+  text-decoration: line-through;
+}
+
+/* INPUT TODOLIST */
+.add-to-do {
+  margin: 1em;
+  width: 100%;
+}
+.add-to-do input {
+  border-radius: 4px;
+  border: none;
+  width: 80%;
+  height: 2em;
+}
+/* =========================== */
+/* FIA REGUL */
+/* =========================== */
+.fiaregul .rowHight,
+.fiaregul .rowLi,
+.fiaregul .rowLow {
+  margin-top: 1em;
+}
+
+.col-1,
+.liLow .input-1 {
+  width: 3em;
+}
+.col-2,
+.liLow .input-2 {
+  width: 5em;
+}
+/* Ligne superieure */
+.liHight .col-1,
+.liHight .col-2,
+.liCenter .col-1,
+.liCenter .col-2,
+.liLow .col-1,
+.liLow .col-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  border-radius: 4px;
+  background-color: var(--text-color);
+  color: var(--principale-bg-color);
+}
+
+/* LI Inserés en Javascript */
+.liCenter {
+  display: flex;
+}
+
+/* RowLow */
+.liLow .col-1,
+.liLow .col-2 {
+  background-color: var(--principale-bg-color);
+}
+
+.liLow .input-1,
+.liLow .input-2 {
+  height: 24px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  /* margin: 4px; */
+}
+
+button {
+  margin: 1em;
+  text-align: center;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: none;
+}
+
+/* HORLOGE */
+.bigclock {
+  color: var(--secondary-bg-color);
+  margin-right: 1em;
+}
+
+#heure {
+  font-size: 16em;
+}
+#minutes {
+  font-size: 8em;
+}
+#dateDay {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.alarmRappel {
+  margin-bottom: 1em;
+}
+
+.alarmRappel .imgRappel {
+  width: 24px;
+  height: 24px;
+  /* margin: 0 0.5em; */
+}
+.alarmRappel input {
+  width: 80px;
+  height: 24px;
+}
+.alarmRappel button {
+  background-color: var(--text-color);
+}
+
+#timeRappel {
+  color: var(--text-color);
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+/* --principale-bg-color: #424752;
+  --secondary-bg-color: #242527; */
+
+@media (max-width: 1250px) {
+  .navbar h1 {
+    margin: 0 1em;
+    font-size: 1em;
+  }
+  .navbar ul li {
+    font-size: 0.8em;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .fiaregul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #listFia {
+    display: flex;
+  }
+
+  .liHight,
+  .rowLi,
+  .rowLow,
+  .liCenter {
+    flex-direction: column;
+  }
+  .rowLow {
+    border: solid 1px white;
+  }
+  .liHight .col-1,
+  .liHight .col-2,
+  .liCenter .col-1,
+  .liCenter .col-2,
+  .liLow .col-1,
+  .liLow .col-2,
+  .liLow .input-1,
+  .liLow .input-2 {
+    width: 4em;
+    height: 2em;
+  }
+  .liLow {
+    flex-direction: column;
+  }
+
+  .bigclock {
+    margin: 0;
+  }
+  .heureEtDate {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  #heure,
+  #minutes,
+  #dateDay,
+  .heureEtDate p {
+    font-size: 2em;
+    color: var(--text-color);
+  }
+  #dateDay {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1251px) {
+  .heureEtDate p {
+    display: none;
+  }
+}
